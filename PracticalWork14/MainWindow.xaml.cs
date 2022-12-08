@@ -34,6 +34,9 @@ namespace PracticalWork14
         bool[] B;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            WindowPassword pass = new WindowPassword();
+            pass.Owner = this;
+            pass.ShowDialog();
             A = new int[5, 6];
             B = new bool[6];
             dataGridA.ItemsSource = VisualArray.ToDataTable(A).DefaultView;

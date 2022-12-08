@@ -26,17 +26,28 @@ namespace PracticalWork14
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            password.Focus();
+            
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-
+            if (password.Password == "123") Close();
+            else
+            {
+                MessageBox.Show("Нет.");
+                password.Focus();
+            }
         }
 
         private void Escape_Click(object sender, RoutedEventArgs e)
         {
+            Owner.Close();
+        }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (password.Password != "123") e.Cancel = true;
         }
     }
 }

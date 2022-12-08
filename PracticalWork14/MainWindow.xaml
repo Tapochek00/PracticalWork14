@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PracticalWork14"
         mc:Ignorable="d"
-        Title="Практическая работа 13" Height="500" Width="300"
+        Title="Практическая работа 13" Height="500" Width="400"
         MinHeight="500" MinWidth="300" Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -23,7 +23,9 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
@@ -32,9 +34,9 @@
                 <TextBox x:Name="max" ToolTip="Максимальное значение" TextChanged="minmaxTextChanged" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" MinWidth="50" Grid.Row="1" Margin="10"></TextBox>
                 <Label Grid.Column="0" Grid.Row="1">max</Label>
                 <TextBox x:Name="jzn" ToolTip="Номер проверяемого столбца" TextChanged="jzn_TextChanged" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" MinWidth="50" Grid.Row="2" Margin="10"></TextBox>
-                <Label Grid.Column="0" Grid.Row="2">j-столбец</Label>
-                <Button x:Name="Fill" Grid.Column="2" Grid.Row="0" Content="Заполнить" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Click="Fill_Click"></Button>
-                <Button x:Name="Count2" Grid.Column="2" Grid.Row="2"  Content="Рассчитать" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Click="btn_Count_Click"></Button>
+                <Label Grid.Column="0" Grid.Row="2">j</Label>
+                <Button x:Name="Fill" Grid.Column="4" Grid.Row="0" Content="Заполнить" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Click="Fill_Click"></Button>
+                <Button x:Name="Count2" Grid.Column="4" Grid.Row="2"  Content="Рассчитать" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Click="btn_Count_Click"></Button>
             </Grid>
         </GroupBox>
 
