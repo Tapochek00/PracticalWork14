@@ -37,8 +37,10 @@ namespace PracticalWork14
             WindowPassword pass = new WindowPassword();
             pass.Owner = this;
             pass.ShowDialog();
-            A = new int[5, 6];
-            B = new bool[6];
+            Data1.RowCount = 5;
+            Data1.ColumnCount = 6;
+            A = new int[Data1.RowCount, Data1.ColumnCount];
+            B = new bool[Data1.ColumnCount];
             dataGridA.ItemsSource = VisualArray.ToDataTable(A).DefaultView;
         }
 
@@ -188,8 +190,20 @@ namespace PracticalWork14
         {
             int col = dataGridA.CurrentCell.Column.DisplayIndex;
             int row = dataGridA.SelectedIndex;
-            status.Text = "Выбрана ячейка: " + col.ToString() + " " + row.ToString();
-            status2.Text = "Размер таблицы: 5х6";
+            status.Text = $"Выбрана ячейка: {col+1}:{row+1}";
+            status2.Text = $"Размер таблицы: {Data1.RowCount}x{Data1.ColumnCount}";
+        }
+
+        private void Setting_Click(object sender, RoutedEventArgs e)
+        {
+            Setting opt = new Setting();
+            opt.Owner = this;
+            opt.ShowDialog();
+            A = new int[Data1.RowCount, Data1.ColumnCount];
+            B = new bool[Data1.ColumnCount];
+            dataGridA.ItemsSource = VisualArray.ToDataTable(A).DefaultView;
+            Class2.ClearArr(ref B);
+            dataGridB.ItemsSource = null;
         }
     }
 }
