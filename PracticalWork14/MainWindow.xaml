@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Практическая работа 14" Height="500" Width="400"
         MinHeight="500" MinWidth="400" Loaded="Window_Loaded"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -81,7 +81,7 @@
             </ToolBar>
 
             <GroupBox Margin="0, 10" Grid.Row="0" Header="Исходные данные">
-                <DataGrid x:Name="dataGridA" GotFocus="dataGridA_GotFocus" HeadersVisibility="None" CellEditEnding="dataGridA_CellEditEnding">
+                <DataGrid x:Name="dataGridA" GotFocus="dataGridA_GotFocus" ScrollViewer.CanContentScroll="True" HeadersVisibility="None" CellEditEnding="dataGridA_CellEditEnding">
                     <DataGrid.ContextMenu>
                         <ContextMenu>
                             <MenuItem Header="Очистить" Click="Clear_Click"></MenuItem>

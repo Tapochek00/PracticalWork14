@@ -18,10 +18,10 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="100">Размер таблицы</Label>
-        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="26" Width="58">Столбцы</Label>
-        <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="26" Width="48">Строки</Label>
-        <TextBox x:Name="cols" ToolTip="Количество столбцов таблицы" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" MinWidth="50" Grid.Row="2"/>
-        <TextBox x:Name="rows" ToolTip="Количество столбцов таблицы" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" MinWidth="50" Grid.Row="2"/>
+        <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="26" Width="58">Столбцы</Label>
+        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="26" Width="48">Строки</Label>
+        <TextBox x:Name="cols" ToolTip="Количество столбцов таблицы" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" MinWidth="50" Grid.Row="2"/>
+        <TextBox x:Name="rows" ToolTip="Количество столбцов таблицы" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" MinWidth="50" Grid.Row="2"/>
         <Button x:Name="Count2" Grid.ColumnSpan="2" Grid.Row="3" Content="Применить" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5" Click="Size_Click" Width="200"></Button>
     </Grid>
 </Window>

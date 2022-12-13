@@ -31,12 +31,12 @@ namespace PracticalWork14
         {
             try
             {
-                int.TryParse(cols.Text, out Data1.ColumnCount);
                 int.TryParse(rows.Text, out Data1.RowCount);
+                int.TryParse(cols.Text, out Data1.ColumnCount);
 
                 StreamWriter sw = new StreamWriter("config.txt");
-                sw.WriteLine(Convert.ToString(cols.Text));
                 sw.WriteLine(rows.Text);
+                sw.WriteLine(cols.Text);
                 sw.Close();
 
                 Close();

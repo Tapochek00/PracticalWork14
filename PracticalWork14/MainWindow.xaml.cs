@@ -37,8 +37,15 @@ namespace PracticalWork14
             WindowPassword pass = new WindowPassword();
             pass.Owner = this;
             pass.ShowDialog();
-            Data1.RowCount = 5;
-            Data1.ColumnCount = 6;
+
+            StreamReader sr = new StreamReader("config.txt");
+            int rows = new FileInfo("config.txt").Length == 0 ? 5 : Convert.ToInt32(sr.ReadLine());
+            int cols = new FileInfo("config.txt").Length == 0 ? 6 : Convert.ToInt32(sr.ReadLine());
+            sr.Close();
+
+            Data1.RowCount = rows;
+            Data1.ColumnCount = cols;
+            
             A = new int[Data1.RowCount, Data1.ColumnCount];
             B = new bool[Data1.ColumnCount];
             dataGridA.ItemsSource = VisualArray.ToDataTable(A).DefaultView;
@@ -204,6 +211,17 @@ namespace PracticalWork14
             dataGridA.ItemsSource = VisualArray.ToDataTable(A).DefaultView;
             Class2.ClearArr(ref B);
             dataGridB.ItemsSource = null;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Завершить работу?", "Подтверждение выхода",
+                MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+
         }
     }
 }
